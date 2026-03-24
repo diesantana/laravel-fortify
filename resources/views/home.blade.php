@@ -9,7 +9,12 @@
                 <p class="display-6">{{ env('APP_NAME') }}</p>
             </div>
             <div class="col d-flex justify-content-end align-items-center gap-5 p-3">
-                <span>Usuário: <strong class="text-info">[usuário]</strong></span>
+                <span>
+                    Usuário: <strong class="text-info">{{Auth::user()->name}}</strong>
+                    <span class="text-primary">
+                        {{Auth::user()->email}}
+                    </span>
+                </span>
                 {{-- Botão de logout --}}
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

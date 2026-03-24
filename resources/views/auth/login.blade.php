@@ -22,7 +22,12 @@
 
                     <div class="mt-4 d-flex justify-content-between">
                         <div>
-                            <a href="{{ route('register') }}">Ainda não tem conta?</a>
+                            <div class="mb-1">
+                                <a href="{{ route('register') }}">Ainda não tem conta?</a>
+                            </div>
+                            <div>
+                                <a href="{{ route('password.request') }}">Esqueci minha senha</a>
+                            </div>
                         </div>
                         <div class="text-end">
                             <button type="submit" class="btn btn-secondary px-5">LOGIN</button>
